@@ -16,5 +16,5 @@ before_install:
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg2
 - sfdx force:source:push -u ciorg2
-- sfdx force:apex:test:run -u ciorg -c -r human
+- sfdx force:apex:test:run -u ciorg2 -c -r human
 - sfdx force:org:delete -u ciorg2 -p
